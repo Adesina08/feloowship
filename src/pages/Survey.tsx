@@ -127,10 +127,10 @@ export default function Survey() {
     return column.label;
   };
 
-  const getMultiLabels = (questionId: string, value: any) => {
-    if (!Array.isArray(value)) return [];
-    return value.map((entry) => getOptionLabel(questionId, entry));
-  };
+  // const getMultiLabels = (questionId: string, value: any) => {
+  //   if (!Array.isArray(value)) return [];
+  //   return value.map((entry) => getOptionLabel(questionId, entry));
+  // };
 
   // const buildMultiCells = (
   //   questionId: string,
