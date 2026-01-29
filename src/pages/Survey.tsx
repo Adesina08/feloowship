@@ -132,23 +132,23 @@ export default function Survey() {
     return value.map((entry) => getOptionLabel(questionId, entry));
   };
 
-  const buildMultiCells = (
-    questionId: string,
-    columnBase: string,
-    value: any
-  ) => {
-    const labels = getMultiLabels(questionId, value);
-    const question = questionLookup.get(questionId);
-    const maxCells =
-      question?.maxSelect ?? question?.options?.length ?? labels.length;
-    const cells: Record<string, string> = {};
+  // const buildMultiCells = (
+  //   questionId: string,
+  //   columnBase: string,
+  //   value: any
+  // ) => {
+  //   const labels = getMultiLabels(questionId, value);
+  //   const question = questionLookup.get(questionId);
+  //   const maxCells =
+  //     question?.maxSelect ?? question?.options?.length ?? labels.length;
+  //   const cells: Record<string, string> = {};
 
-    for (let i = 0; i < maxCells; i += 1) {
-      cells[`${columnBase} - ${i + 1}`] = labels[i] ?? "";
-    }
+  //   for (let i = 0; i < maxCells; i += 1) {
+  //     cells[`${columnBase} - ${i + 1}`] = labels[i] ?? "";
+  //   }
 
-    return cells;
-  };
+  //   return cells;
+  // };
 
   const buildMultiOptionColumns = (questionId: string, value: any) => {
     const selected = Array.isArray(value) ? value : [];
